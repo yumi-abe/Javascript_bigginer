@@ -279,3 +279,62 @@ const valueList = myMap.values();
 for( value of valueList){
     console.log(value);
 }
+
+//Array
+
+// const fruits = new Array();
+const fruits = [
+    'りんご','バナナ'
+];
+
+console.log(fruits);
+
+fruits.push('みかん');
+
+console.log(fruits);
+
+//callback
+// fruits.forEach(function(input){
+//     console.log(input);
+// });
+
+//コールバック関数　名前がない関数（無名関数）
+//ES6 アロー関数 =>
+
+//関数の名前あり
+// const getItem = ()=>{console.log('アロー')};
+const getItem = ()=> console.log('アロー');
+getItem();
+
+//関数の名前なし
+fruits.forEach(input => console.log(input));
+
+//Array.filter
+
+const filterScores = [10,20,30,40];
+
+// const newScores = filterScores.filter((value)=> {
+//     return value >= 30;
+// })
+
+const newScores = filterScores.filter((value)=> value >= 30);
+console.log(newScores);
+
+
+//Array.find
+
+const members = ['本田','香川','長友'];
+
+const findMember = members.find((value) => value === '長友');
+console.log(findMember);
+
+//Array.map 配列をもとに新しい配列を作る
+const userList = [10,20,30,40];
+//テンプレート文字列 `${}`バッククオート
+// const useIdList = userList.map((value) => {
+//     return `user_${value}`;
+// })
+
+const useIdList = userList.map(value => `user_${value}`);
+
+console.table(useIdList);
