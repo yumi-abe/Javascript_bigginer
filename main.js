@@ -338,3 +338,32 @@ const userList = [10,20,30,40];
 const useIdList = userList.map(value => `user_${value}`);
 
 console.table(useIdList);
+
+//Object オブジェクト
+const ObjectTest = {
+    test1:10,
+    test2:20,
+    test3:30
+};
+
+console.log(Object.values(ObjectTest));
+
+for(value of Object.values(ObjectTest)){
+    console.log(value);
+}
+
+//ユーザー定義関数+組み込み関数
+
+const postalCode = '123-4567';
+
+function checkPostalCode(string){
+    const replaced = string.replace('-','');
+    const length = replaced.length;
+
+    if(length ===7 ){
+        return true;
+    }
+    return false;
+}
+
+console.log(checkPostalCode(postalCode));
