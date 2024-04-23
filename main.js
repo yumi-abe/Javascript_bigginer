@@ -152,3 +152,21 @@ const score = 80;
 const comment = score >= 80 ? 'good' : 'not good';
 
 console.log(comment);
+
+//繰り返し
+//for 繰り返しの回数を指定
+//for in　あまり使わない
+
+//for off (ES6) 使いやすい
+
+const nums = [10, 20, 30];
+
+for( num of nums ){
+    console.log(num);
+}
+
+//for(初期値;繰り返す条件;増減 ++ --)
+
+for(let i = 0; i < 10; i ++){
+    console.log(i);
+}
