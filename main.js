@@ -356,14 +356,23 @@ for(value of Object.values(ObjectTest)){
 
 const postalCode = '123-4567';
 
-function checkPostalCode(string){
-    const replaced = string.replace('-','');
+const postal = {
+
+    postalCode:'123-4567',
+
+    checkPostalCode(string){
+        const replaced = string.replace('-','');
     const length = replaced.length;
 
-    if(length ===7 ){
+    if(length === 7 ){
         return true;
     }
     return false;
+    }
 }
 
-console.log(checkPostalCode(postalCode));
+
+
+console.log(postal.checkPostalCode(postalCode));
+
+console.log(postal.postalCode);
