@@ -148,10 +148,10 @@ if(signal_1 === 'red' || signal_2 === 'blue'){
 }
 
 //三項演算子
-const score = 80;
-const comment = score >= 80 ? 'good' : 'not good';
+// const score = 80;
+// const comment = score >= 80 ? 'good' : 'not good';
 
-console.log(comment);
+// console.log(comment);
 
 //繰り返し
 //for 繰り返しの回数を指定
@@ -197,4 +197,85 @@ if(data === 2){
 }
 if(data === 3){
     console.log('3です');
+}
+
+//組み込み関数
+// function test(引数){
+//     //処理
+
+//     //戻り値
+//     return 戻り値;
+// }
+
+//インプット引数なし　アウトプットなし
+function function_test(){
+    console.log('テスト');
+}
+function_test();
+
+//インプット引数あり
+//アウトプット戻り値なし
+const comment = 'コメント'
+const comment2 = 'コメント2'
+
+
+function getComment(string){
+    console.log(string);
+}
+
+getComment(comment2);
+
+//インプット引数なし
+//アウトプット戻り値あり
+
+function getNumberOfComment(){
+    return 5;
+}
+
+console.log(getNumberOfComment());
+
+const NumberOfComment = getNumberOfComment();
+console.log(NumberOfComment);
+
+//インプット引数2つ
+//アウトプットあり
+function sumPrice(int1, int2){
+    let int3 = int1 + int2;
+    return int3;
+}
+const total = sumPrice(3,5);
+console.log(total);
+
+//組み込み関数
+
+const test1 = 'テスト';
+const test3 = 'です';
+console.log(test1.length);
+
+console.log(test1.concat(test3));
+
+const greeting = ' Hello world ';
+console.log(greeting);
+
+console.log(greeting.trim());
+
+const str = 'Mozilla';
+
+console.log(str.substring(1,3));
+
+console.log(str.substring(1));
+
+//Map（連想配列）
+const myMap = new Map();
+
+myMap.set('id',3);
+myMap.set('name','本田');
+
+console.log(myMap);
+
+console.log(myMap.get('name'));
+
+const valueList = myMap.values();
+for( value of valueList){
+    console.log(value);
 }
