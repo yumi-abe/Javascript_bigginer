@@ -361,7 +361,7 @@ const postal = {
     postalCode:'123-4567',
 
     checkPostalCode(string){
-        const replaced = string.replace('-','');
+    const replaced = string.replace('-','');
     const length = replaced.length;
 
     if(length === 7 ){
@@ -371,8 +371,24 @@ const postal = {
     }
 }
 
-
-
 console.log(postal.checkPostalCode(postalCode));
 
 console.log(postal.postalCode);
+
+//メソッドチェーン
+
+// const replaced = string.replace('-','');
+// const length = replaced.length;
+
+const replaced = postalCode.replace('-','').length;
+console.log(replaced);
+
+//グローバル
+const globalVariable = 'グローバル';
+
+function checkScope(){
+    const localVariable = 'ローカル';
+    console.log(localVariable)
+}
+console.log(globalVariable);
+checkScope();
