@@ -83,3 +83,72 @@ const member_3 = {
 };
 
 console.log(member_3['1kumi']['本田']['hobby']);
+
+//演算子
+const test_1 = 4;
+let test_2 = 3;
+
+//test_2 += 3;
+
+const test_3 = test_1 + test_2;
+console.log(test_3);
+
+//if文
+
+// if (条件){
+//     条件が真なら実行
+// } else{
+//     条件が偽なら実行
+// }
+
+const height = 0;
+
+console.log(typeof height);
+
+if(height == 90){
+    console.log('身長は' + height + 'cmです');
+} else {
+    console.log('身長は90cmではありません');
+}
+
+
+// == 一致
+// === 型も一致
+
+const signal = 'blue';
+
+if(signal === 'red'){
+    console.log('とまれ');
+} else if(signal === 'yellow'){
+    console.log('一旦停止');
+} else{
+    console.log('進む');
+}
+
+
+const speed = 60;
+
+if(signal === 'blue'){
+    if(speed >= 60){
+        console.log('スピード違反');
+    }
+}
+
+//AND,OR
+
+const signal_1 = 'red';
+const signal_2 = 'blue';
+
+if(signal_1 === 'red' && signal_2 === 'blue'){
+    console.log('赤と青');
+}
+
+if(signal_1 === 'red' || signal_2 === 'blue'){
+    console.log('赤と青');
+}
+
+//三項演算子
+const score = 80;
+const comment = score >= 80 ? 'good' : 'not good';
+
+console.log(comment);
