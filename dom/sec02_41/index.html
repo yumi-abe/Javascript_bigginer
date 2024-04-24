@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <!-- <button id="target" onclick="chenge_color()">押してね</button> -->
+    <button id="target">押してね</button>
+
+   
+
+    <script>
+        //①HTMLタグにonclickと設定する
+        // function chenge_color(){
+        //     const test = document.getElementById('test');
+        //     test.textContent = 'テスト';
+        //     test.classList.add('red');
+        // }
+
+        //②Jsで設定 Element.onclick
+        // document.getElementById('target').onclick = function (){
+        //     const test = document.getElementById('test');
+        //     test.textContent = 'テスト';
+        //     test.classList.add('red');
+        // }
+
+        //③イベントリスナー
+        const target = document.getElementById('target');
+
+        target.addEventListener('click', (e) => {
+            console.log(e);
+            const test = document.getElementById('test');
+            test.textContent = 'テスト';
+            test.classList.add('red');
+        });
+    </script>
+</body>
+</html>
