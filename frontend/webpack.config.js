@@ -2,6 +2,9 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const TerserJSPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserJSPlugin = require('terser-webpack-plugin');
+
 
 
 module.exports = {
@@ -23,6 +26,14 @@ module.exports = {
   plugins: [new MiniCssExtractPlugin({
     filename: 'style.css',
   })],
+  optimization: {
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`,
+      new TerserJSPlugin({}),
+      new CssMinimizerPlugin(),
+    ],
+  },
   // optimization: {
   //   minimizer: [new TerserJSPlugin({}),
   //     new OptimizeCssAssetsPlugin({})],
